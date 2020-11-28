@@ -23,7 +23,7 @@ Inkmove should provide the following main features :
 
 Inkmove will use its own engine written in C++ using  [libcinder.org](http://libcinder.org)
 
-for scripting we can use a graph based description language using [Node Editor](https://pypi.org/project/nodeeditor/) for example.
+for scripting we can use a graph based description language using mGui [Node Editor](https://github.com/thedmd/imgui-node-editor).
 
 
 # Contributing
