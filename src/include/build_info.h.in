@@ -1,0 +1,5 @@
+#pragma once
+// manim engine 2  Version  "x.y.z"
+constexpr const char *versionString = "@PACKAGE_VERSION@";
+// manim engine 2  Build Date "DD/MM/YYYY"
+constexpr const char *buildDate = "@BUILD_DATE@";
