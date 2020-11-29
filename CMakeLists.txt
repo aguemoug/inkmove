@@ -14,5 +14,10 @@ target_include_directories(cinder PUBLIC include)
 add_library(inkmove ${INKMOVE_CORE_SRC_SET})
 #main is an executable to test inkmove functionality during developpemnt
 add_executable(main ${INKMOVE_TEST_SRC_SET})
+
+#main is an executable to test inkmove functionality during developpemnt
+add_executable(editor ${INKMOVE_EDITOR_SRC_SET})
+
 target_link_libraries(main inkmove cinder)
 target_link_libraries(inkmove cinder)
+target_link_libraries(editor cinder)
