@@ -1,0 +1,93 @@
+@startuml manim
+
+class Transform{
+    vec3 location
+    vec3 scale
+    vec3 rotation
+}
+class Color{
+r,g,b
+hex
+}
+
+class Visual{
+    Transform transform
+    Color color
+    vector<Visual> children
+    Visual parent
+
+    addChild(Visual)
+    removeChild(Visual)
+    draw()
+}
+
+class Shape {
+}
+class Rectangle{
+    width
+    height
+}
+class RoundedRectangle{
+    cornerRadious
+}
+class Arc{
+
+}
+class CurvedArrow{
+
+}
+class Circle{
+
+}
+class Dot{
+
+}
+class SmallDot{
+
+}
+
+class AnnotationDot{
+
+}
+
+class LabeledDot{
+
+}
+
+class Line{}
+class DashedLine{}
+
+Shape --|> Visual
+Arc --|> Shape
+CurvedArrow --|> Arc
+Circle --|> Arc
+AnnularSector --|> Arc
+
+Dot --|> Circle
+Ellipse --|> Circle
+Annulus --|> Circle
+
+SmallDot  --|> Dot
+AnnotationDot  --|> Dot
+LabeledDot  --|> Dot
+Sector  --|> AnnularSector
+Line  --|> Shape
+DashedLine  --|> Line
+TangentLine  --|> Line
+Arrow --|> Line
+MathVector --|> Arrow 
+Polygon --|> Shape
+ArcPolygon --|> Shape
+ArcPolygonFromArcs --|> Shape
+RegularPolygon --|> Polygon
+Triangle --|> RegularPolygon
+Rectangle --|> RegularPolygon
+Sequare --|> Rectangle
+
+RoundedRectangle --|> Rectangle
+ArrowTip --|> Shape
+
+ArrowTriangleTip --|> ArrowTip
+ArrowCircleTip --|> ArrowTip
+ArrowSquareTip --|> ArrowTip
+@enduml
